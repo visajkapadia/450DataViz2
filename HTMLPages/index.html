@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eye Visualization - 2</title>
+
+    <!-- Load d3.js -->
+    <script type = "text/javascript" src = "https://cdnjs.cloudflare.com/ajax/libs/d3/5.12.0/d3.js"></script>
+    <!-- jQuery and Ajax -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<!-- Load plot.js -->
+<script type="text/javascript" src="../Js/plot.js"></script>
+
+<svg id="mySvg" height="600" width="700"></svg>
+
+<div>
+    <h6>Details</h6>
+    <div id="details">
+        <p>...</p>
+    </div>
+</div>
+<input type="checkbox" class="vizCheckbox" name="Tree" value="tree" checked onchange="filterByViz()" visibility="visible"> Tree
+<input type="checkbox" class="vizCheckbox" name="graph" value="graph" checked onchange="filterByViz()" visibility="visible"> Graph
+
+<input type="checkbox" class="domainCheckbox" name="general" value="general" checked onchange="filterByDomain()"> General
+<input type="checkbox" class="domainCheckbox" name="expert" value="expert" checked onchange="filterByDomain()"> Expert
+<br>
+Graph Points: <div id="graphPointCount"></div>
+Tree Points: <div id="treePointCount"></div>
+</body>
+</html>
